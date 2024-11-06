@@ -1,11 +1,8 @@
 using DelMar.DB;
-using DelMar.Entidades.Helpers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System.ComponentModel.Design.Serialization;
-using System.Runtime.CompilerServices;
 namespace DelMar.NET6
 {
     internal static class Program
@@ -38,10 +35,22 @@ namespace DelMar.NET6
             {
                 var configuration = context.Configuration;
 
-                services.AddTransient<Form1>();
+                #region Context
                 services.AddDbContext<DelMarContext>(opt =>
-                    opt.UseSqlServer(configuration.GetConnectionString("pcMari"));
+                    opt.UseSqlServer(configuration.GetConnectionString("pcMari")));
+
+                #endregion
+
+                #region Formularios
                 //services.AddTransient<IMyService,MyService>();
+
+                services.AddTransient<Form1>();
+
+                #endregion
+
+                #region Repositorios
+
+                #endregion
             });
     }
 }

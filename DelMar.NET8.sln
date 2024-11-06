@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelMar.NET8", "DelMar.NET6\DelMar.NET8.csproj", "{852DE96D-FEA4-422F-A7B3-BE66AD0C4DB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelMar.Entidades", "DelMar.Entidades\DelMar.Entidades.csproj", "{6188BAA8-8FB5-4794-9275-4551E2993F99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelMar.Entidades", "DelMar.Entidades\DelMar.Entidades.csproj", "{6188BAA8-8FB5-4794-9275-4551E2993F99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelMar.Negocio", "DelMar.Negocio\DelMar.Negocio.csproj", "{A87C9F02-E325-41A4-A4C3-AAC2350D0A30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelMar.Negocio", "DelMar.Negocio\DelMar.Negocio.csproj", "{A87C9F02-E325-41A4-A4C3-AAC2350D0A30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelMar.DB", "DelMar.DB\DelMar.DB.csproj", "{986961E6-0D74-4DE3-882F-3189169D41C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelMar.DB", "DelMar.DB\DelMar.DB.csproj", "{986961E6-0D74-4DE3-882F-3189169D41C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelMar.View", "DelMar.View\DelMar.View.csproj", "{8627488B-A665-415B-B271-80CF73E6BA7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{852DE96D-FEA4-422F-A7B3-BE66AD0C4DB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{852DE96D-FEA4-422F-A7B3-BE66AD0C4DB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{852DE96D-FEA4-422F-A7B3-BE66AD0C4DB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{852DE96D-FEA4-422F-A7B3-BE66AD0C4DB7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6188BAA8-8FB5-4794-9275-4551E2993F99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6188BAA8-8FB5-4794-9275-4551E2993F99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6188BAA8-8FB5-4794-9275-4551E2993F99}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{986961E6-0D74-4DE3-882F-3189169D41C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{986961E6-0D74-4DE3-882F-3189169D41C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{986961E6-0D74-4DE3-882F-3189169D41C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8627488B-A665-415B-B271-80CF73E6BA7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8627488B-A665-415B-B271-80CF73E6BA7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8627488B-A665-415B-B271-80CF73E6BA7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8627488B-A665-415B-B271-80CF73E6BA7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
