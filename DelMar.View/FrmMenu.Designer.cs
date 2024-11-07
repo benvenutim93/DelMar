@@ -33,19 +33,20 @@
             btnConsultaListaPrecios = new Button();
             menuStrip = new MenuStrip();
             menuGestion = new ToolStripMenuItem();
-            menuPrecios = new ToolStripMenuItem();
-            menuPresupuesto = new ToolStripMenuItem();
             articulosToolStripMenuItem = new ToolStripMenuItem();
             categoriasToolStripMenuItem = new ToolStripMenuItem();
             proveedoresToolStripMenuItem = new ToolStripMenuItem();
+            menuPrecios = new ToolStripMenuItem();
             consultaListaPreciosToolStripMenuItem = new ToolStripMenuItem();
             actualizacionListaDePreciosToolStripMenuItem = new ToolStripMenuItem();
             actualizacionPorcentualToolStripMenuItem = new ToolStripMenuItem();
+            menuPresupuesto = new ToolStripMenuItem();
             menuStrip.SuspendLayout();
             SuspendLayout();
             // 
             // button1
             // 
+            button1.BackColor = Color.White;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.Location = new Point(525, 367);
             button1.Name = "button1";
@@ -53,10 +54,11 @@
             button1.TabIndex = 0;
             button1.Text = "Presupuesto";
             button1.TextImageRelation = TextImageRelation.TextBeforeImage;
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
             // btnConsultaListaPrecios
             // 
+            btnConsultaListaPrecios.BackColor = Color.White;
             btnConsultaListaPrecios.Image = (Image)resources.GetObject("btnConsultaListaPrecios.Image");
             btnConsultaListaPrecios.Location = new Point(12, 367);
             btnConsultaListaPrecios.Name = "btnConsultaListaPrecios";
@@ -64,7 +66,7 @@
             btnConsultaListaPrecios.TabIndex = 1;
             btnConsultaListaPrecios.Text = "Consulta Lista Precios";
             btnConsultaListaPrecios.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnConsultaListaPrecios.UseVisualStyleBackColor = true;
+            btnConsultaListaPrecios.UseVisualStyleBackColor = false;
             // 
             // menuStrip
             // 
@@ -84,21 +86,6 @@
             menuGestion.Size = new Size(112, 29);
             menuGestion.Text = "Gestion";
             // 
-            // menuPrecios
-            // 
-            menuPrecios.DropDownItems.AddRange(new ToolStripItem[] { consultaListaPreciosToolStripMenuItem, actualizacionListaDePreciosToolStripMenuItem, actualizacionPorcentualToolStripMenuItem });
-            menuPrecios.Image = (Image)resources.GetObject("menuPrecios.Image");
-            menuPrecios.Name = "menuPrecios";
-            menuPrecios.Size = new Size(108, 29);
-            menuPrecios.Text = "Precios";
-            // 
-            // menuPresupuesto
-            // 
-            menuPresupuesto.Image = (Image)resources.GetObject("menuPresupuesto.Image");
-            menuPresupuesto.Name = "menuPresupuesto";
-            menuPresupuesto.Size = new Size(150, 29);
-            menuPresupuesto.Text = "Presupuesto";
-            // 
             // articulosToolStripMenuItem
             // 
             articulosToolStripMenuItem.Image = (Image)resources.GetObject("articulosToolStripMenuItem.Image");
@@ -112,6 +99,7 @@
             categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
             categoriasToolStripMenuItem.Size = new Size(270, 34);
             categoriasToolStripMenuItem.Text = "Categorias";
+            categoriasToolStripMenuItem.Click += categoriasToolStripMenuItem_Click;
             // 
             // proveedoresToolStripMenuItem
             // 
@@ -119,6 +107,15 @@
             proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
             proveedoresToolStripMenuItem.Size = new Size(270, 34);
             proveedoresToolStripMenuItem.Text = "Proveedores";
+            proveedoresToolStripMenuItem.Click += proveedoresToolStripMenuItem_Click;
+            // 
+            // menuPrecios
+            // 
+            menuPrecios.DropDownItems.AddRange(new ToolStripItem[] { consultaListaPreciosToolStripMenuItem, actualizacionListaDePreciosToolStripMenuItem, actualizacionPorcentualToolStripMenuItem });
+            menuPrecios.Image = (Image)resources.GetObject("menuPrecios.Image");
+            menuPrecios.Name = "menuPrecios";
+            menuPrecios.Size = new Size(108, 29);
+            menuPrecios.Text = "Precios";
             // 
             // consultaListaPreciosToolStripMenuItem
             // 
@@ -141,6 +138,13 @@
             actualizacionPorcentualToolStripMenuItem.Size = new Size(343, 34);
             actualizacionPorcentualToolStripMenuItem.Text = "Actualizacion Porcentual";
             // 
+            // menuPresupuesto
+            // 
+            menuPresupuesto.Image = (Image)resources.GetObject("menuPresupuesto.Image");
+            menuPresupuesto.Name = "menuPresupuesto";
+            menuPresupuesto.Size = new Size(150, 29);
+            menuPresupuesto.Text = "Presupuesto";
+            // 
             // FrmMenu
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -156,6 +160,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip;
             Name = "FrmMenu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Descartables Del Mar - Menu Principal";
             menuStrip.ResumeLayout(false);
             menuStrip.PerformLayout();

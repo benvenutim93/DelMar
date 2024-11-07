@@ -2,8 +2,5 @@
 
 namespace DelMar.Negocio.Interfaces
 {
-    public interface IProveedorService
-    {
-        List<Proveedor> GetAll();
-    }
+    public interface IProveedorService : IBaseService<Proveedor>  { }
 }

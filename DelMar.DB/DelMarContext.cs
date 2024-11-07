@@ -1,23 +1,22 @@
 ﻿using DelMar.Entidades.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore.Storage;
+using System.Data.Common;
 
 namespace DelMar.DB
 {
     public class DelMarContext : DbContext
     {
         private IDbContextTransaction dbTran;
-        public DelMarContext(DbContextOptions<DelMarContext> options) :base(options)
+        public DelMarContext(DbContextOptions<DelMarContext> options) : base(options)
         {
 
         }
 
         public DbSet<Articulo> Articulos { get; set; }
         public DbSet<Configuracion> Configuraciones { get; set; }
-        public DbSet <Proveedor> Proveedores { get; set; }
-        public DbSet <Categoria> Categorias { get; set; }
-
-                partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+        public DbSet<Proveedor> Proveedores { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
 
         public void InitDBTransaction(System.Data.IsolationLevel il)
         {

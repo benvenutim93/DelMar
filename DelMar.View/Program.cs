@@ -2,11 +2,18 @@ using DelMar.DB;
 using DelMar.DB.Interfaces;
 using DelMar.DB.Repositorios;
 using DelMar.DB.UOF;
+using DelMar.Negocio.Interfaces;
+using DelMar.Negocio.Servicios;
 using DelMar.NET6;
+using DelMar.View.ABM_s;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using NLog.Extensions.Logging;
+using LogLevel = Microsoft.Extensions.Logging.LogLevel;
+
 namespace DelMar.View
 {
     internal static class Program
@@ -21,6 +28,7 @@ namespace DelMar.View
             Application.Run(form);
         }
 
+
         static IHostBuilder CreateHostBuilder() => Host.CreateDefaultBuilder()
             .ConfigureAppConfiguration((context, config) =>
             {
@@ -29,6 +37,12 @@ namespace DelMar.View
                     .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                     .AddEnvironmentVariables();
             })
+             .ConfigureLogging((context, logging) =>
+             {
+                 logging.ClearProviders(); 
+                 logging.SetMinimumLevel(LogLevel.Information);  // Establecer nivel mínimo de logging (opcional)
+                 logging.AddNLog(); 
+             })
             .ConfigureServices((context, services) =>
             {
                 var configuration = context.Configuration;
@@ -40,9 +54,10 @@ namespace DelMar.View
                 #endregion
 
                 #region Formularios
-                //services.AddTransient<IMyService,MyService>();
 
                 services.AddTransient<FrmMenu>();
+                services.AddTransient<FrmAbmProveedores>();
+                services.AddTransient<FrmAbmCategorias>();
 
                 #endregion
 
@@ -55,6 +70,14 @@ namespace DelMar.View
 
 
                 services.AddScoped<IUnitOfWork, UnitOfWork>();
+                #endregion
+
+                #region Servicios
+
+                services.AddScoped<IProveedorService, ProveedorService>();
+                services.AddScoped<IArticuloService, ArticulosService>();
+                services.AddScoped<ICategoriaService, CategoriaService>();
+
                 #endregion
             });
     }

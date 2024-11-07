@@ -1,16 +1,11 @@
 ﻿using DelMar.DB.Interfaces;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DelMar.DB.Repositorios;
 
 namespace DelMar.DB.UOF
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly DelMarContext _context; 
+        private readonly DelMarContext _context;
         private IArticulosRepositorio _articulosRepositorio;
         private IProveedoresRepositorio _proveedoresRepositorio;
         private ICategoriaRepositorio _categoriasRepositorio;
@@ -20,13 +15,45 @@ namespace DelMar.DB.UOF
         {
             _context = context;
         }
-        public IArticulosRepositorio Articulos => this._articulosRepositorio;
+        public IArticulosRepositorio Articulos
+        {
+            get
+            {
+                if (_articulosRepositorio == null)
+                    _articulosRepositorio = new ArticulosRepositorio(_context);
+                return _articulosRepositorio;
+            }
+        }
 
-        public IProveedoresRepositorio Proveedores => this._proveedoresRepositorio;
+        public IProveedoresRepositorio Proveedores
+        {
+            get
+            {
+                if (_proveedoresRepositorio == null)
+                    _proveedoresRepositorio = new ProveedoresRepositorio(_context);
+                return _proveedoresRepositorio;
+            }
+        }
 
-        public ICategoriaRepositorio Categorias => this._categoriasRepositorio;
+        public ICategoriaRepositorio Categorias
+        {
+            get
+            {
+                if (_categoriasRepositorio == null)
+                    _categoriasRepositorio = new CategoriasRepositorio(_context);
+                return _categoriasRepositorio;
+            }
+        }
 
-        public IConfiguracionesRepositorio Configuraciones => _configuracionesRepositorio;
+        public IConfiguracionesRepositorio Configuraciones
+        {
+            get
+            {
+                if (_configuracionesRepositorio == null)
+                    _configuracionesRepositorio = new ConfiguracionesRepositorio(_context);
+                return _configuracionesRepositorio;
+            }
+        }
 
         public bool IsInTransaction => _context.IsInTransaction;
 
@@ -54,7 +81,7 @@ namespace DelMar.DB.UOF
         {
             await _context.SaveChangesAsync();
         }
-        
+
         public void Dispose()
         {
             _context.Dispose();

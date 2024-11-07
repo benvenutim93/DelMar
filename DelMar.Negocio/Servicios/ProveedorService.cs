@@ -16,5 +16,19 @@ namespace DelMar.Negocio.Servicios
         {
             return _unitOfWork.Proveedores.GetAll().ToList();
         }
+
+        public bool Insert(Proveedor proveedor)
+        {
+            return _unitOfWork.Proveedores.Insert(proveedor);
+        }
+
+        public bool Update(Proveedor proveedor) 
+        { 
+            return _unitOfWork.Proveedores.Update(proveedor);
+        }
+
+        public bool Delete(Proveedor proveedor) { 
+            return _unitOfWork.Proveedores.Delete(proveedor);
+        }
     }
 }
