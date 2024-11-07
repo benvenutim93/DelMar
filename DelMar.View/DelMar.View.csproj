@@ -7,6 +7,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>SST.ico</ApplicationIcon>
+    <ApplicationHighDpiMode>SystemAware</ApplicationHighDpiMode>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,6 +26,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DelMar.DB\DelMar.DB.csproj" />
     <ProjectReference Include="..\DelMar.Entidades\DelMar.Entidades.csproj" />
+    <ProjectReference Include="..\DelMar.Negocio\DelMar.Negocio.csproj" />
   </ItemGroup>
 
 </Project>
