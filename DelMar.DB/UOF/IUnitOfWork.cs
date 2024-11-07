@@ -8,5 +8,13 @@ namespace DelMar.DB.UOF
         IProveedoresRepositorio Proveedores { get; }
         ICategoriaRepositorio Categorias { get; }
         IConfiguracionesRepositorio Configuraciones { get; }
+
+        void Commit();
+        void CommitDBTransaction();
+        void InitDBTransaction(IsolationLevel il);
+        bool IsInTransaction { get; }
+        void RollbackDBTransaction();
+        Task SaveChanges();
+
     }
 }

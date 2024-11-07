@@ -28,6 +28,33 @@ namespace DelMar.DB.UOF
 
         public IConfiguracionesRepositorio Configuraciones => _configuracionesRepositorio;
 
+        public bool IsInTransaction => _context.IsInTransaction;
+
+        public void Commit()
+        {
+            _context.Commit();
+        }
+
+        public void CommitDBTransaction()
+        {
+            _context.CommitDBTransaction();
+        }
+
+        public void InitDBTransaction(System.Data.IsolationLevel il)
+        {
+            _context.InitDBTransaction(il);
+        }
+
+        public void RollbackDBTransaction()
+        {
+            _context.RollbackDBTransaction();
+        }
+
+        public async Task SaveChanges()
+        {
+            await _context.SaveChangesAsync();
+        }
+        
         public void Dispose()
         {
             _context.Dispose();
