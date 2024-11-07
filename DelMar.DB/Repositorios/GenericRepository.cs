@@ -1,9 +1,9 @@
 ﻿using DelMar.DB;
-using DelMar.Negocio.Interfaces.Base;
+using DelMar.DB.Interfaces.Base;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace DelMar.Negocio
+namespace DelMar.DB.Repositorios
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {

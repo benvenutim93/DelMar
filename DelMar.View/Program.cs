@@ -1,25 +1,23 @@
 using DelMar.DB;
+using DelMar.DB.Interfaces;
+using DelMar.DB.Repositorios;
+using DelMar.DB.UOF;
+using DelMar.NET6;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-namespace DelMar.NET6
+namespace DelMar.View
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-
             ApplicationConfiguration.Initialize();
 
             var host = CreateHostBuilder().Build();
-            var form = host.Services.GetRequiredService<Form1>();
+            var form = host.Services.GetRequiredService<FrmMenu>();
             Application.Run(form);
         }
 
@@ -35,7 +33,7 @@ namespace DelMar.NET6
             {
                 var configuration = context.Configuration;
 
-                #region Context
+                #region Context - Unit of Work
                 services.AddDbContext<DelMarContext>(opt =>
                     opt.UseSqlServer(configuration.GetConnectionString("pcMari")));
 
@@ -44,12 +42,19 @@ namespace DelMar.NET6
                 #region Formularios
                 //services.AddTransient<IMyService,MyService>();
 
-                services.AddTransient<Form1>();
+                services.AddTransient<FrmMenu>();
 
                 #endregion
 
                 #region Repositorios
 
+                services.AddScoped<IArticulosRepositorio, ArticulosRepositorio>();
+                services.AddScoped<ICategoriaRepositorio, CategoriasRepositorio>();
+                services.AddScoped<IProveedoresRepositorio, ProveedoresRepositorio>();
+                services.AddScoped<IConfiguracionesRepositorio, ConfiguracionesRepositorio>();
+
+
+                services.AddScoped<IUnitOfWork, UnitOfWork>();
                 #endregion
             });
     }

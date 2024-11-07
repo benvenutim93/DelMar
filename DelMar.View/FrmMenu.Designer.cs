@@ -1,6 +1,6 @@
 ﻿namespace DelMar.NET6
 {
-    partial class Form1
+    partial class FrmMenu
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
+            SuspendLayout();
+            // 
+            // FrmMenu
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "FrmMenu";
+            Text = "Descartables Del Mar - Menu Principal";
+            ResumeLayout(false);
         }
 
         #endregion

@@ -1,8 +1,8 @@
 ﻿using System.Linq.Expressions;
 
-namespace DelMar.Negocio.Interfaces.Base
+namespace DelMar.DB.Interfaces.Base
 {
-    internal interface IGenericRepository<T> where T : class
+    public interface IGenericRepository<T> where T : class
     {
         bool Insert(T obj);
         bool Update(T obj);
