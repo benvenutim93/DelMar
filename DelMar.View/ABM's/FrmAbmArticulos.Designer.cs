@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAbmArticulos));
             SuspendLayout();
             // 
             // FrmAbmArticulos
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(714, 577);
+            ClientSize = new Size(1226, 644);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmAbmArticulos";
             Text = "Administracion de Articulos";
             ResumeLayout(false);

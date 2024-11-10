@@ -1,6 +1,8 @@
-﻿namespace DelMar.Negocio.Interfaces
+﻿using DelMar.Entidades.Models;
+
+namespace DelMar.Negocio.Interfaces
 {
-    public interface IArticuloService
+    public interface IArticuloService : IBaseService<Articulo>
     {
     }
 }

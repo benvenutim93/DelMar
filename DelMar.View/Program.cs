@@ -6,6 +6,7 @@ using DelMar.Negocio.Interfaces;
 using DelMar.Negocio.Servicios;
 using DelMar.NET6;
 using DelMar.View.ABM_s;
+using DelMar.View.Actualizar_Lista_Precio;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -58,6 +59,7 @@ namespace DelMar.View
                 services.AddTransient<FrmMenu>();
                 services.AddTransient<FrmAbmProveedores>();
                 services.AddTransient<FrmAbmCategorias>();
+                services.AddTransient<FrmActualizarLista>();
 
                 #endregion
 
@@ -77,6 +79,7 @@ namespace DelMar.View
                 services.AddScoped<IProveedorService, ProveedorService>();
                 services.AddScoped<IArticuloService, ArticulosService>();
                 services.AddScoped<ICategoriaService, CategoriaService>();
+                services.AddScoped<IConfiguracionService, ConfiguracionService>();
 
                 #endregion
             });

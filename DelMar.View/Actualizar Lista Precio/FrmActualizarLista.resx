@@ -117,7 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="bsProveedores.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnAdjuntar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAATr0AAE69AFFT5SzAAAAB3RJ
+        TUUH5QsWDjY1Xc5hnwAAA15JREFUWEft10mozVEcwPGLzEOEzN7QVWTKuCAbsUQsKTYo2SJLZWFlyrQx
+        lAXJQhRSypKSMcpUMlsgQ5HZ93vf7/86/ve+9+677y0s/OqT9z/n/M/v3P//nPM/Cv+jo9HY2Fioq6sr
+        NDQ0DMAMrMA6LMME9EC07uSwY/TDKlzCB/zCb/zEaxzHfHRD3NkJYWcYhSP4ih+4hxPYj7N4CQfzFhvR
+        G9FDB8JOYPIzMMFDrMdIlH4pemIidsAn4yA3oSuipxrCm5Emv46ZzoX6+vpo1RSUywE5Jz7BJ7EQ0aKd
+        4Y3IJ5+OUl2liDoHsR3ecwzdES2qDG9Au5JnEW0m4xWcF+MtqzpsjJqSG9HOOXEOrpIlllUVNkSLyUMX
+        zA3+HXc3hXPDMhyAfTgnoraViJvaSq5F8NHewlDL0vAazgOXqP0st6zVsAGqTf4cbjxOtLKdz2vYl/vE
+        e7hjRm2FsBLtSe4mtBv9Eb00hddhLezLHbOsXXNYgU5JbliGRtyEbVdHWbRIIipqTl4sFrMJ52sYgToM
+        xkAsxWb40YqMSViImpMHt2K3ZPu4j6dwYh6G9/VBZEzCQgzHadSafAGuwMloH3lfcBQ+lcgcYQEWww/G
+        DdSS/BkqJc7zK+mTiuyEF/A9uT4nxXWqrcd+GZWSncQhfEvK5Bey9a+ilaFi8jgFyXeeHULyTO7GtBPf
+        o0xuWlMR2SqElZgDJ5LvtTl5Uu9szyZtJQ56D3xKu5AOYgNKfZWFFXDr9LRj44Pw6BUtmtu41JzttvFL
+        Z7u9iX1w4LPQFw7CQdneuugtF1bAJfkIHiKmWZaG1xiLJ7DDiyhiNMYksr3A9n6s3qGqARgv8Bh2GrVN
+        4TWGwHVuh040V4IDynjtBJ0N4wJsK59G9JYLKzAMd/ER8yxL6mQMghMt6zTPH+C33604Te5rWIlSn2Vh
+        Bfyuu1y84TzGMfMtc274KP1lnv3dPz4j6zy1BUaaXLdR9lT/Civh0ekavOkB3FI952fH7a3oBXe4NEHG
+        13M1V+Zg16CUo8XIGsD1egqearNO3sDTTelXwMnoDpcmqsTk2+DxLDK1ETaEHxH3BEfu/4IcVPPBw3/h
+        WveVuRzziX3nd+D91SdvT9gpnB9T4CbjMsv2AQedPa2445+IQuEPk+MKphQTQX4AAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="ofdListaPrecios.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>202, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAQAMDAAAAEAIACoJQAARgAAAEBAAAABACAAKEIAAO4lAAAgIAAAAQAgAKgQAAAWaAAAgIAAAAEA
